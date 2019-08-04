@@ -1,0 +1,10 @@
+package {{servicePackage}};
+
+
+import java.util.Map;
+
+public abstract interface {{serviceInterface}} {
+
+	{{details}}
+
+}

@@ -1,0 +1,5 @@
+﻿aaa=bbb
+DAOPackage=com.domed.weian.dao
+url=C:\Users\Administrator\Desktop\MC\数据库文档(第二版).xlsx
+sheetName=表结构
+entityPackage=com.domed.weian.domain

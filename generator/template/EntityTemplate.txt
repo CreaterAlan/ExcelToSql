@@ -1,0 +1,19 @@
+package {{package}};
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import com.domed.core.domain.IdEntity;
+import java.util.Date;
+import java.math.BigDecimal;
+
+
+@Entity
+@Table(name = "{{tableName}}")
+public class {{EntityName}} extends IdEntity {
+
+	{{colums}}
+
+	{{getterAndSetter}}
+
+}

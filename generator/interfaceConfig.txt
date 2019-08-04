@@ -1,0 +1,4 @@
+﻿filePath=C:\Users\Administrator\Desktop\python\演练服务大厅接口文档(第六版).xls
+controllerPackage=com.domed.api.controller
+servicePackage=com.domed.api.service
+serviceImplPackage=com.domed.api.service.imp

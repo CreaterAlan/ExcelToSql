@@ -1,0 +1,10 @@
+package {{DAOPackage}};
+
+import com.domed.core.dao.GenericDAO;
+import {{entityPackage}}.{{entityName}};
+import org.springframework.stereotype.Repository;
+
+@Repository("{{DAONameSmall}}")
+public class {{DAONameBig}} extends GenericDAO<{{entityName}}> {
+	
+}

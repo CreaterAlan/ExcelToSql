@@ -1,0 +1,29 @@
+    @RequestMapping(value = "{{methonName}}.json", method = {RequestMethod.POST}, produces = "application/json")
+    public void {{methonName}}(HttpServletRequest request, HttpServletResponse response, @RequestBody Map infoMap) {
+        
+		String newBody = RequestUtil.getRequestBody(request);
+
+        if(infoMap.size() == 0){
+            infoMap = JSON.parseObject(newBody);
+        }
+        JSONObject jo = new JSONObject();
+        int code = 0;
+        String msg = "操作成功";
+        Map resultMap= null;
+        try {
+            resultMap = {{serviceName}}.{{methonName}}(infoMap);
+        } catch (ApplicationException e) {
+            code = e.getCode();
+            msg = e.getMessage();
+            e.printStackTrace();
+        } catch (Exception e) {
+            code = -1;
+            msg = "操作异常";
+            logger.error(e.getMessage());
+        } finally {
+            jo.put("code", code);
+            jo.put("msg", msg);
+            jo.put("data", resultMap);
+            JsonUtil.output(request, response, jo);
+        }
+    }
